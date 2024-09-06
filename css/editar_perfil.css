@@ -63,6 +63,7 @@ body {
     bottom: -50px;
     right: -220px; 
     transform: rotate(342deg);
+
 }
 
 .container {
@@ -71,9 +72,10 @@ body {
     overflow: auto;
 }
 
+/* circunferencia y boton de perfil */
 .circunferencia-container {
     position: absolute;
-    top: 100px;
+    top: 80px; 
     left: 200px;
     transform: translate(-50%, 0); 
     text-align: center;
@@ -111,6 +113,7 @@ body {
     overflow: hidden; 
     background-clip: padding-box; 
 }
+
 /*ventana secundaria*/
 .modal {
     display: none;
@@ -212,15 +215,14 @@ body {
 /*MENU*/
 .menu-container {
     position: absolute;
-    top: 210px; 
-    left: 300px; 
+    top: 180px; 
+    left: 300px;    
     display: flex;
     align-items: center;
     font-size: 16px;
     color: #20298c;
 }
 
-/*hasta aqui cambie cosas*/
 .menu-item {
     padding: 10px 20px;
     cursor: pointer;
@@ -269,7 +271,7 @@ body {
 
 .user-info {
     position: absolute;
-    top: 150px; 
+    top: 120px; 
     left: 300px; 
     text-align: center;
     color: #20298c;
@@ -284,3 +286,195 @@ body {
     font-size: 18px;
     color: #737373;
 }
+
+/*estilo de los contenedores*/
+/* contenedor padre */
+.contenedor-cursos-publicaciones {
+    position: relative;
+    top: 80px; 
+    left: 300px; 
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 30px; 
+    padding: 20px;
+    width: 80%; 
+    max-width: 1000px;
+    box-sizing: border-box; 
+}
+
+/* subcontenedores */
+.contenedor-curso {
+    position: relative;
+    padding-left: 120px; 
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 100px; 
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* estilo para la circunferencia de cursos */
+.circunferencia-course {
+    width: 100px; 
+    height: 100px; 
+    border-radius: 50%;
+    background-color: rgba(143, 148, 198, 0.2); 
+    border: 5px solid white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    position: absolute;
+    left: 10px; 
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/*imagen dentro de la circunferencia */
+.curso-imagen {
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover; 
+    border-radius: 50%; 
+}
+
+
+
+
+/*--------------------------------------------------------------*/
+/* Responsive */
+/* @media (min-width: 768px) {
+    .top-bar {
+        flex-direction: row;
+        justify-content: space-between;
+        height: 50px; 
+    }
+
+    .logo-container {
+        margin-left: -60px;
+        margin-bottom: 0;
+    }
+
+    .logo-container img {
+        height: 80px; 
+    }
+
+    .logo-container h1 {
+        font-size: 18px;
+        margin-left: -50px;
+    }
+
+    .icon-container img {
+        height: 20px;
+    }
+
+    .barra {
+        width: 600px; 
+    }
+
+    .circunferencia-container {
+        top: 80px; 
+        left: 160px;
+        transform: translate(-50%, 0);
+    }
+
+    .circunferencia {
+        width: 120px; 
+        height: 120px;
+    }
+
+    .modal-content {
+        width: 40%; 
+    }
+
+    .modal-info input {
+        width: 80%;
+    }
+
+    .menu-container {
+        top: 160px; 
+        left: 250px; 
+    }
+
+    .user-info {
+        top: 100px; 
+        left: 250px; 
+    }
+}
+
+@media (max-width: 767px) {
+    .top-bar {
+        height: auto;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px;
+    }
+
+    .logo-container {
+        margin-left: 0;
+        margin-bottom: 10px;
+    }
+
+    .logo-container img {
+        height: 60px; 
+    }
+
+    .logo-container h1 {
+        font-size: 16px; 
+        margin-left: 0;
+    }
+
+    .icon-container img {
+        height: 18px; 
+    }
+
+    .barra {
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+
+    .barra-top-left,
+    .barra-bottom-right {
+        position: static;
+        transform: none;
+    }
+
+    .circunferencia-container {
+        position: relative;
+        top: 0;
+        left: 0;
+    }
+
+    .circunferencia {
+        width: 100px; 
+        height: 100px; 
+    }
+
+    .modal-content {
+        width: 80%;
+    }
+
+    .modal-info input {
+        width: 100%; 
+    }
+
+    .menu-container {
+        top: auto;
+        left: 0;
+        font-size: 14px; 
+    }
+
+    .user-info {
+        top: auto;
+        left: 0;
+        font-size: 14px; 
+    }
+}
+ */
