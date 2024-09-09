@@ -1,0 +1,299 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #ffffff; 
+}
+
+.contenedor {
+    width: 1200px; 
+    height: 480px; 
+    border: 2px solid #000; 
+    background-color: #ffffff; 
+    border-radius: 20px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    padding: 20px; 
+    position: relative;
+}
+
+.titulo {
+    color: #1f288d; 
+    font-size: 24px; 
+    margin: 0; 
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+.subtitulo {
+    color: #fe7203; 
+    font-size: 18px; 
+    font-weight: normal; 
+    margin: 0; 
+    position: absolute;
+    top: 50px; 
+    left: 20px; 
+}   
+
+.circunferencia-foto {
+    width: 200px;
+    height: 200px; 
+    border-radius: 50%; 
+    background-color: #1f288d; 
+    position: absolute;
+    top: 140px; 
+    left: 30px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.circunferencia-foto img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover; 
+}
+
+.mensaje {
+    color: #1f288d; 
+    font-size: 20px; 
+    font-weight: normal; 
+    margin: 0; 
+    position: absolute;
+    top: 100px;
+    left: 20px;
+}
+
+.mensaje2 {
+    color: #1f288d; 
+    font-size: 18px;
+    font-weight: normal; 
+    margin: 0; 
+    position: absolute;
+    top: 360px; 
+    left: 30px; 
+}
+
+.mensaje3 {
+    color: #1f288d; 
+    font-size: 18px; 
+    font-weight: normal; 
+    margin: 0; 
+    position: absolute;
+    top: 100px;
+    left: 300px; 
+}
+
+.mensaje4 {
+    color: #1f288d; 
+    font-size: 18px; 
+    font-weight: normal; 
+    margin: 0; 
+    position: absolute;
+    top: 190px; 
+    left: 300px; 
+}
+
+.contenedor-titulo {
+    position: absolute;
+    top: 130px; 
+    left: 300px;
+    width: 900px; 
+    height: 50px; 
+    border: 2px solid #fe7203; 
+    border-radius: 10px; 
+    padding: 5px; 
+    box-sizing: border-box; 
+}
+
+.contenedor-titulo textarea {
+    width: 100%; 
+    height: 100%; 
+    border: none;
+    outline: none; 
+    resize: none; 
+    padding: 5px; 
+    font-size: 16px; 
+    box-sizing: border-box; 
+}
+
+
+
+.contenedor-categoria {
+    border: 2px solid #fe7203; 
+    border-radius: 10px; 
+    padding: 10px; 
+    position: absolute;
+    top: 400px; 
+    left: 30px; 
+    width: 200px; 
+    background-color: #ffffff; 
+}
+
+.dropdown-btn {
+    background-color: #ffffff; 
+    color: #1f288d; 
+    border: 1px solid #fe7203;
+    padding: 10px; 
+    text-align: left; 
+    width: 100%; 
+    border-radius: 5px; 
+    cursor: pointer;
+    border: none;
+    outline: none;
+    resize: none; 
+}
+
+.dropdown-content {
+    display: none; 
+    position: absolute; 
+    background-color: #ffffff; 
+    border: 1px solid #1f288d; 
+    border-radius: 5px; 
+    width: 100%; 
+    max-height: 200px; 
+    overflow-y: auto;
+    z-index: 1; 
+}
+
+.dropdown-content a {
+    padding: 10px; 
+    text-decoration: none;
+    display: block; 
+}
+
+.contenedor-curso {
+    position: absolute;
+    top: 220px; 
+    left: 300px; 
+    width: 300px; 
+    height: 50px; 
+    border: 2px solid #fe7203; 
+    border-radius: 10px; 
+    padding: 5px; 
+    box-sizing: border-box;
+    background-color: #ffffff; 
+}
+
+
+.dropdown-btn-curso {
+    background-color: #ffffff; 
+    color: #1f288d; 
+    border: none; 
+    padding: 10px; 
+    text-align: left; 
+    width: 100%; 
+    border-radius: 5px; 
+    cursor: pointer; 
+    outline: none; 
+}
+
+.dropdown-content-curso {
+    display: none; 
+    position: absolute; 
+    background-color: #ffffff;
+    border: 1px solid #1f288d; 
+    border-radius: 5px; 
+    width: 100%; 
+    max-height: 100px;
+    overflow-y: auto; 
+    z-index: 1; 
+}
+
+.dropdown-content-curso a {
+    padding: 10px; 
+    text-decoration: none; 
+    display: block; 
+    color: #1f288d; 
+}
+
+/* Dificultad del Curso * */
+.mensaje5 {
+    color: #1f288d; 
+    font-size: 18px;
+    font-weight: normal; 
+    margin: 0; 
+    position: absolute;
+    top: 190px; 
+    left: 700px; 
+}
+
+.contenedor-dificultad {
+    position: absolute;
+    top: 220px; 
+    left: 700px; 
+    width: 300px; 
+    height: 50px; 
+    border: 2px solid #fe7203; 
+    border-radius: 10px; 
+    padding: 5px; 
+    box-sizing: border-box; 
+    background-color: #ffffff; 
+}
+
+.dropdown-btn-dificultad {
+    background-color: #ffffff; 
+    color: #1f288d; 
+    border: none; 
+    padding: 10px; 
+    text-align: left; 
+    width: 100%; 
+    border-radius: 5px; 
+    cursor: pointer; 
+    outline: none; 
+}
+
+.dropdown-content-dificultad {
+    display: none; 
+    position: absolute; 
+    background-color: #ffffff; 
+    border: 1px solid #1f288d; 
+    border-radius: 5px; 
+    width: 100%; 
+    max-height: 100px; 
+    overflow-y: auto; 
+    z-index: 1; 
+}
+
+.dropdown-content-dificultad a {
+    padding: 10px; 
+    text-decoration: none; 
+    display: block; 
+    color: #1f288d; 
+}
+
+/*  "Descripción *" */
+.mensaje6 {
+    color: #1f288d; 
+    font-size: 18px; 
+    font-weight: normal; 
+    margin: 0;
+    position: absolute;
+    top: 285px; 
+    left: 300px; 
+}
+
+.contenedor-descripcion {
+    position: absolute;
+    top: 320px; 
+    left: 300px; 
+    width: 900px; 
+    height: 80px; 
+    border: 2px solid #fe7203;
+    border-radius: 10px; 
+    padding: 5px; 
+    box-sizing: border-box; 
+}
+
+.contenedor-descripcion textarea {
+    width: 100%; 
+    height: 100%; 
+    border: none; 
+    outline: none; 
+    resize: none; 
+    padding: 5px; 
+    font-size: 16px; 
+    box-sizing: border-box; 
+}

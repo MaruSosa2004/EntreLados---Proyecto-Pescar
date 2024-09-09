@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Curso</title>
+    <link rel="stylesheet" href="../css/formulario_curso.css">
+</head>
+<body>
+    <div class="contenedor">
+        <h1 class="titulo">Formulario de creación de curso</h1>
+        <h2 class="subtitulo">Primer paso: Completa con la información básica del curso. (*obligatorio)</h2>
+        <p class="mensaje">¡Carga la portada del curso! *</p>
+        <div class="circunferencia-foto">
+        </div>
+        <p class="mensaje2">Categoría del curso *</p>
+        <p class="mensaje3">Título del curso *</p>
+        <!-- --------------------------- -->
+        <p class="mensaje4">¿A quién va dirigido el curso? *</p>
+        <div class="contenedor-curso">
+            <button class="dropdown-btn-curso">Interés general ▼</button>
+            <div class="dropdown-content-curso">
+                <a href="#">Interés general</a>
+                <a href="#">Centro específico</a>
+            </div>
+        </div>
+        <!-- ------------------------------------ -->
+        <p class="mensaje5">Dificultad del Curso *</p>
+
+        <div class="contenedor-dificultad">
+            <button class="dropdown-btn-dificultad">Principiante ▼</button>
+            <div class="dropdown-content-dificultad">
+                <a href="#">Principiante</a>
+                <a href="#">Intermedio</a>
+                <a href="#">Avanzado</a>
+            </div>
+        </div>
+         <!-- --------------------------------------- -->
+        <div class="contenedor-titulo">
+            <textarea id="contenedor-titulo" placeholder="Busca algo que llame la atención y destaque de otras publicaciones."></textarea>
+        </div>
+        <div class="contenedor-categoria">
+            <button class="dropdown-btn">Selecciona una categoría ▼</button>
+            <div class="dropdown-content">
+                <a href="#">Belleza</a>
+                <a href="#">Automotriz</a>
+                <a href="#">Tecnología</a>
+                <a href="#">Habilidades blandas</a>
+                <a href="#">Inserción Laboral</a>
+                <a href="#">Organización</a>
+                <a href="#">Idiomas</a>
+                <a href="#">Diseño</a>
+                <a href="#">Marketing</a>
+                <a href="#">Otros</a>
+            </div>
+        </div>
+ 
+          <p class="mensaje6">Descripción *</p>
+          <div class="contenedor-descripcion">
+              <textarea id="contenedor-descripcion" placeholder="Proporciona una descripción detallada del curso."></textarea>
+          </div>
+
+        <script src="../js/formulario_curso.js"></script>
+    </div>
+</body>
+</html>

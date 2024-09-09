@@ -321,19 +321,20 @@ body {
 
 /* estilo para la circunferencia de cursos */
 .circunferencia-course {
-    width: 100px; 
-    height: 100px; 
+    width: 100px;
+    height: 100px;
     border-radius: 50%;
-    background-color: rgba(143, 148, 198, 0.2); 
+    background-color: rgba(143, 148, 198, 0.2);
     border: 5px solid white;
     display: flex;
     align-items: center;
     justify-content: center;
     overflow: hidden;
     position: absolute;
-    left: 10px; 
+    left: 10px;
     top: 50%;
     transform: translateY(-50%);
+    z-index: 1; /* Asegurarse de que esté detrás de mensaje-imagen */
 }
 
 /*imagen dentro de la circunferencia */
@@ -345,7 +346,46 @@ body {
 }
 
 
+.mensaje-imagen {
+    position: absolute;
+    top: 10px; /* Ajusta la posición vertical si es necesario */
+    left: 10px; /* Ajusta la posición horizontal para que esté a la izquierda de la circunferencia */
+    transform: translateY(-50%); /* Ajusta la posición vertical si es necesario */
+    background-color: #20298c; /* Fondo blanco semi-transparente */
+    color: #ffffff;
+    padding: 5px 15px;
+    border-radius: 15px;
+    text-align: center;
+    z-index: 2; /* Asegurarse de que esté encima de otros elementos */
+}
 
+.contenedor-curso {
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding-left: 120px; /* Deja espacio suficiente para la circunferencia */
+}
+
+.circunferencia-course {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: rgba(143, 148, 198, 0.2);
+    border: 5px solid white;
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1; /* Asegúrate de que esté detrás del texto */
+}
+
+.contenedor-curso .texto {
+    margin-left: 120px; /* Asegúrate de que el texto no se superponga con la circunferencia */
+    max-width: calc(100% - 130px); /* Ajusta el ancho máximo del texto */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap; /* Evita que el texto se divida en varias líneas */
+}
 
 /*--------------------------------------------------------------*/
 /* Responsive */
