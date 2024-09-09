@@ -86,10 +86,12 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 document.addEventListener('DOMContentLoaded', function() {
-    var contenedorDescripcion = document.getElementById('contenedor-descripcion').querySelector('textarea');
+    var contenedorDescripcion = document.getElementById('contenedor-descripcion');
 
     contenedorDescripcion.addEventListener('focus', function() {
-        contenedorDescripcion.placeholder = ''; 
+        if (contenedorDescripcion.value === ''){
+            contenedorDescripcion.placeholder = ''; 
+        }
     });
 
     contenedorDescripcion.addEventListener('blur', function() {
@@ -97,4 +99,20 @@ document.addEventListener('DOMContentLoaded', function() {
             contenedorDescripcion.placeholder = 'Escribe una descripción detallada de tu publicación aquí.'; 
         }
     });
+});
+
+
+/* boton siguiente le faltan los metodos */
+/* document.addEventListener('DOMContentLoaded', () => {
+    const btnSiguiente = document.getElementById('btn-siguiente');
+
+    btnSiguiente.addEventListener('click', () => {
+
+    });
+});
+ */
+
+document.getElementById('btn-siguiente').addEventListener('click', function() {
+    document.getElementById('formulario_curso').style.display = 'none';
+    document.getElementById('formulario_curso2').style.display = 'block';
 });
