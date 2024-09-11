@@ -5,8 +5,13 @@ body {
     height: 100vh;
     margin: 0;
     background-color: #ffffff; 
+    font-family: 'Poppins', sans-serif;
+   
 }
 
+.titulo, .subtitulo, .mensaje, .mensaje2, .mensaje3, .mensaje4, .mensaje5, .mensaje6 {
+    font-family: 'Poppins', sans-serif;
+}
 .contenedor {
     width: 1200px; 
     height: 480px; 
