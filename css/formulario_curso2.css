@@ -7,6 +7,7 @@ body {
     background-color: #ffffff;
 }
 
+/*! Contenedor principal */
 .contenedor {
     width: 1200px;
     min-height: 480px;
@@ -38,11 +39,12 @@ body {
     left: 20px;
 }
 
+/*! Boton para agregar modulo */
 .boton-agregar {
     background-color: #1f288d;
     color: white;
     border: none;
-    border-radius: 5px;
+    border-radius: 15px;
     padding: 10px 20px;
     cursor: pointer;
     display: block;
@@ -50,11 +52,13 @@ body {
     position: relative;
 }
 
+/*! contenedor de los modulos */
 #modulos-container {
     margin-top: 80px;
     position: relative;
 }
 
+/*! modulos */
 .modulo {
     border: 1px solid #1f288d;
     margin-top: 10px;
@@ -81,6 +85,7 @@ body {
     height: 100%;
 }
 
+/*! Campo para texto  */
 input[type="text"] {
     border: none;
     padding: 8px 15px;
@@ -99,6 +104,7 @@ input[type="text"]:focus {
     outline: none;
 }
 
+/*! icono de flecha(desplegar)  */
 .arrow-icon {
     width: 8px;
     height: 8px;
@@ -117,6 +123,7 @@ input[type="text"]:focus {
     transform: translateY(-50%) rotate(-135deg); 
 }
 
+/*! Contenido expandible del modulo */
 .modulo-content-expandible {
     max-height: 0; 
     overflow: hidden;
@@ -136,10 +143,11 @@ input[type="text"]:focus {
     margin-bottom: 10px;
     border: 2px solid black; 
     transition: max-height 0.3s ease-in-out;
+
 }
 
-
-/* Título de la descripcion */
+/*! Descripcion  */
+/*? Titulo de la descripcion */
 .descripcion-titulo {
     color: #1f288d;
     font-size: 16px;
@@ -147,14 +155,14 @@ input[type="text"]:focus {
     font-weight: bold;
 }
 
-/* Contenedor de la descripcion */
+/*? Contenedor de la descripcion */
 .descripcion-contenedor {
     border-radius: 10px;
     background-color: #fe7203;
     padding: 10px;
 }
 
-/*texto de la descripción */
+/*? texto de la descripción */
 .descripcion-texto {
     width: 100%;
     height: 100px;
@@ -176,8 +184,8 @@ input[type="text"]:focus {
     color: #1f288d;
 }
 
-
-/* Estilos para el contenedor expandible */
+/*! contenido desplegable  */
+/* Descripcion:  Estilos para el contenido expandible dentro del modulo*/
 .modulo-content-expandible {
     max-height: 0; 
     overflow: hidden;
@@ -199,7 +207,10 @@ input[type="text"]:focus {
     transition: max-height 0.3s ease-in-out;
 }
 
-/* Estilo para el titulo de la descripcion */
+/*! Descripcion Contenido  */
+/* Descripcion: Estilos para los titulos, 
+contenedores y campos de texto dentro 
+de las descripciones */
 .descripcion-titulo {
     color: #1f288d;
     margin-top: 5px;
@@ -231,11 +242,13 @@ input[type="text"]:focus {
     background-color: #ffffff; 
     box-sizing: border-box;
 }
-    
 
-/* ------------------------------------------------------------- */
+/*! Contenedor del contenido desplegable  */
+/* Descripcion: Estilos para el numero en circulo y
+el contenedor de contenido, incluyendo el elemento de
+linea vertical y la imagen */
 
-/* Estilo del numero en círculo */
+/*? Estilo del numero en círculo */
 .numero-contenido {
     display: inline-flex;
     justify-content: center;
@@ -250,7 +263,7 @@ input[type="text"]:focus {
     margin-top: 15px;
 }
 
-/* Estilo del contenedor de contenido */
+/*? Estilo del contenedor de contenido */
 .contenido {
     display: flex;
     align-items: flex-start; 
@@ -259,7 +272,7 @@ input[type="text"]:focus {
     position: relative;
 }
 
-/* Linea vertical entre numero y boton */
+/*? Linea vertical entre numero y boton */
 .contenido::before {
     content: '';
     position: absolute;
@@ -271,37 +284,50 @@ input[type="text"]:focus {
     margin-bottom: 15px; 
 }
 
-/* Estilo del input para archivos */
+.contenido img {
+    margin-right: 10px; 
+    margin-top: -80px;
+    margin-left: 430px;
+    z-index: 1;
+    pointer-events: none;
+    
+}
+
+/*! Input para archivos  */
+/*? Estilo del input para archivos */
 .contenido input[type="file"] {
     width: 35%;
     padding: 10px;
-    background-color: #f1f1f1;
-    border: 2px solid #ccc;
-    border-radius: 5px;
+    background-color: #ffffff;
+    border: 2px solid #fe7203;
+    border-radius: 25px; 
     cursor: pointer;
-}
-
-/* Ocultar el input original y boton de carga */
-.contenido input[type="file"]::-webkit-file-upload-button {
-    visibility: hidden;
+    margin-top: -50px;
+    margin-left: 500px;
+    font-family: 'Poppins', sans-serif; 
+    color: #1f288d; 
+    font-size: 14px;
 }
 
 .contenido input[type="file"]::before {
-    content: 'Seleccionar archivo';
+    content: 'Seleccione un archivo';
     display: inline-block;
-    background: #fe7203;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    padding: 5px 10px;
+    background: #ffffff;
+    color: #1f288d;
+    border-radius: 25px;
+    padding: 5px 50px;
     cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
 }
 
-.contenido input[type="file"]:hover::before {
-    background-color: #f45a01; 
+.contenido input[type="file"]::-webkit-file-upload-button {
+    visibility: hidden;
+    position: absolute;
 }
 
-/* Boton de agregar contenido (signo +) */
+/*!Botones  */
+/*? Boton de agregar contenido (signo +) */
 .boton-agregar-contenido {
     display: flex;
     align-items: center;
@@ -319,17 +345,260 @@ input[type="text"]:focus {
     font-weight: bold;
 }
 
-/* Boton de guardar modulo */
+/*? boton de guardar modulo */
 .boton-guardar {
     background-color: #fe7203;
     color: white;
     border: none;
     border-radius: 5px;
     padding: 10px 20px;
-    margin-top: 20px;
+    margin-top: 10px;
+    margin-right: 20px;
     cursor: pointer;
-    display: block;
+    display: none; 
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
 }
 
-/* .------------------ */
+/*? Mostrar el botón de guardar solo cuando el contenedor expandible esté expandido */
+.modulo-content-expandible.expandido .boton-guardar {
+    display: block; /* Muestra el botón solo cuando el contenedor está expandido */
+}
+
+/*! contenedor detalle */
+/* Estilo para el contenedor de contenido */
+.contenido-detalle {
+    flex: 1; 
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+/* Estilo del tttulo del contenido */
+.titulo-contenido {
+    color: #1f288d;
+    font-size: 16px;
+    margin-left: 5px; 
+    margin-bottom: 10px;
+    margin-top: 18px;
+    font-weight: bold;
+}
+
+.textarea-contenido {
+    border: 1px solid #1f288d;
+    padding: 8px 15px;
+    border-radius: 10px;
+    background-color: #ffffff;
+    color: rgba(0, 0, 0, 0.7);
+    width: 350px;
+    margin-left: 0; 
+    resize: none;
+    height: 40px; 
+    font-size: 14px;
+}
+
+.textarea-contenido::placeholder {
+    color: rgba(0, 0, 0, 0.7);
+}
+
+.textarea-contenido:focus {
+    outline: none;
+}
+
+.tituloarch {
+    position: absolute; 
+    right: 440px; 
+    margin-top: 10px; 
+    top: 10px;
+    color: #1f288d; 
+    font-weight: bold;
+    font-size: 16px;
+}
+
+/*!RESPONSIVEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE  */
+
+/* Estilos generales para pantallas pequeñas */
+@media (max-width: 1200px) {
+    .contenedor {
+        width: 100%;
+        padding: 10px;
+        box-sizing: border-box;
+    }
+
+    #modulos-container {
+        margin-top: 40px;
+    }
+
+    .modulo {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px;
+        height: auto;
+    }
+
+    .modulo h3 {
+        margin-left: 0;
+        font-size: 14px;
+    }
+
+    input[type="text"] {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .arrow-icon {
+        width: 6px;
+        height: 6px;
+        border-width: 0 1.5px 1.5px 0;
+        transform: rotate(45deg);
+        margin-right: 5px;
+    }
+
+    .modulo-content-expandible {
+        padding: 10px;
+    }
+
+    .descripcion-texto {
+        height: 80px;
+        font-size: 13px;
+    }
+
+    .contenido {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .contenido img {
+        margin-left: 0;
+        margin-right: 0;
+        margin-top: 10px;
+    }
+
+    .contenido input[type="file"] {
+        width: 100%;
+        margin-top: 10px;
+        margin-left: 0;
+    }
+
+    .boton-guardar {
+        right: 10px;
+        bottom: 10px;
+    }
+
+    .textarea-contenido {
+        width: 100%;
+        height: 60px;
+        font-size: 13px;
+    }
+
+    .tituloarch {
+        right: 10px;
+    }
+
+    /* Ajuste para los títulos */
+    .titulo, .subtitulo {
+        position: relative;
+        left: 0;
+        top: 0;
+        margin-bottom: 10px;
+        font-size: 16px; /* Se ajusta el tamaño para pantallas pequeñas */
+    }
+}
+
+/* Estilos para pantallas muy pequeñas */
+@media (max-width: 768px) {
+    .contenedor {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .titulo {
+        font-size: 20px;
+        position: relative;
+        top: 0;
+        left: 0;
+        margin-bottom: 5px;
+    }
+
+    .subtitulo {
+        font-size: 16px;
+        top: 0;
+        left: 0;
+        margin-bottom: 10px;
+    }
+
+    .boton-agregar {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+
+    .modulo {
+        flex-direction: column;
+        padding: 10px;
+        height: auto;
+    }
+
+    .modulo h3 {
+        font-size: 14px;
+    }
+
+    input[type="text"] {
+        width: 100%;
+    }
+
+    .arrow-icon {
+        width: 5px;
+        height: 5px;
+        border-width: 0 1px 1px 0;
+        transform: rotate(45deg);
+        margin-right: 3px;
+    }
+
+    .modulo-content-expandible {
+        padding: 5px;
+    }
+
+    .descripcion-texto {
+        height: 60px;
+        font-size: 12px;
+    }
+
+    .contenido {
+        flex-direction: column;
+    }
+
+    .contenido img {
+        margin-top: 5px;
+    }
+
+    .contenido input[type="file"] {
+        width: 100%;
+        margin-top: 5px;
+    }
+
+    .boton-guardar {
+        right: 5px;
+        bottom: 5px;
+    }
+
+    .textarea-contenido {
+        height: 50px;
+        font-size: 12px;
+    }
+
+    .tituloarch {
+        right: 5px;
+    }
+
+    /* Ajuste para los títulos */
+    .titulo, .subtitulo {
+        position: relative;
+        left: 0;
+        top: 0;
+        margin-bottom: 10px;
+        font-size: 16px;
+    }
+}
 

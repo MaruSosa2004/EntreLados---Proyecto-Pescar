@@ -1,13 +1,13 @@
 const agregarModuloBtn = document.getElementById('agregar-modulo');
 const modulosContainer = document.getElementById('modulos-container');
 
-// Contador para losmodulo
+// Contador para los módulos
 let contadorModulos = 0;
 
 function agregarModulo() {
     contadorModulos++;
 
-    // Crear el contenedor del modulo visible
+    // Crear el contenedor del módulo visible
     const nuevoModulo = document.createElement('div');
     nuevoModulo.classList.add('modulo');
     
@@ -19,7 +19,7 @@ function agregarModulo() {
     const contenidosContainer = document.createElement('div');
     contenidosContainer.classList.add('contenidos-container');
 
-    // Contenido expandible con la descripcion y primer contenido
+    // Contenido expandible con la descripción y primer contenido
     const textareaId = `descripcion-modulo-${contadorModulos}`;
     moduloContentExpandible.innerHTML = `
         <h4 class="descripcion-titulo">Descripción *</h4>
@@ -31,7 +31,7 @@ function agregarModulo() {
     // Agregar el primer contenido
     agregarContenido(contenidosContainer, contadorModulos);
 
-    // Boton para agregar contenido
+    // Botón para agregar contenido
     const botonAgregarContenido = document.createElement('button');
     botonAgregarContenido.classList.add('boton-agregar-contenido');
     botonAgregarContenido.innerHTML = '+';
@@ -42,7 +42,15 @@ function agregarModulo() {
     moduloContentExpandible.appendChild(contenidosContainer);
     moduloContentExpandible.appendChild(botonAgregarContenido);
 
-    // Contenido visible del modulo
+    // Botón de guardar módulo
+    const botonGuardarModulo = document.createElement('button');
+    botonGuardarModulo.classList.add('boton-guardar');
+    botonGuardarModulo.textContent = `Guardar Módulo ${contadorModulos}`;
+    
+    // Añadir el botón de guardar al contenedor expandible
+    moduloContentExpandible.appendChild(botonGuardarModulo);
+
+    // Contenido visible del módulo
     nuevoModulo.innerHTML = `
         <h3>
             Módulo ${contadorModulos}:
@@ -51,30 +59,29 @@ function agregarModulo() {
         </h3>
     `;
 
-    // Boton de guardar modulo
-    const botonGuardarModulo = document.createElement('button');
-    botonGuardarModulo.classList.add('boton-guardar');
-    botonGuardarModulo.textContent = `Guardar Módulo ${contadorModulos}`;
-    
-    // Añadir el modulo y su contenedor expandible al contenedor de modulos
+    // Añadir el módulo y su contenedor expandible al contenedor de módulos
     modulosContainer.appendChild(nuevoModulo);
     modulosContainer.appendChild(moduloContentExpandible);
-    modulosContainer.appendChild(botonGuardarModulo);
 
-    // Evento para expandir el modulo cuando se hace clic en la flecha
+    // Evento para expandir el módulo cuando se hace clic en la flecha
     const arrow = nuevoModulo.querySelector('.arrow-icon');
     arrow.addEventListener('click', function(event) {
         event.stopPropagation();
 
         moduloContentExpandible.classList.toggle('expandido');
-        
         arrow.classList.toggle('active');
     });
 
+    // Manejar el placeholder para la descripción
     const textarea = document.getElementById(textareaId);
     manejarPlaceholder(textarea, 'Ingrese una descripción breve de qué temas se abordarán en este módulo y todo lo que consideres relevante.');
-}
 
+    // Manejar el placeholder para los campos de contenido
+    const textareaContenido = nuevoModulo.querySelector('.textarea-contenido');
+    if (textareaContenido) {
+        manejarPlaceholder(textareaContenido, 'Ingrese el nombre que figurará para el apunte/video');
+    }
+}
 
 function agregarContenido(contenedor, moduloId) {
     const numeroContenidos = contenedor.children.length + 1;
@@ -85,16 +92,21 @@ function agregarContenido(contenedor, moduloId) {
         <span class="numero-contenido">${numeroContenidos}</span>
         <div class="contenido-detalle">
             <div class="titulo-contenido">Título del contenido*</div>
-            <input type="text" placeholder="Ingrese el nombre que figurará para el apunte/video" name="titulo-contenido-${moduloId}-${numeroContenidos}" class="input-contenido">
+            <div class="tituloarch">Cargue el primer contenido*</div>
+            <textarea placeholder="Ingrese el nombre que figurará para el apunte/video" name="titulo-contenido-${moduloId}-${numeroContenidos}" class="textarea-contenido"></textarea>
             <input type="file" name="archivo-contenido-${moduloId}-${numeroContenidos}">
+            <img src="../img/logo2.png" alt="Logo">
         </div>
     `;
+
+    // Aplicar el manejo de placeholder al nuevo campo de texto
+    const textareaContenido = nuevoContenido.querySelector('.textarea-contenido');
+    manejarPlaceholder(textareaContenido, 'Ingrese el nombre que figurará para el apunte/video');
 
     contenedor.appendChild(nuevoContenido);
 }
 
-
-// Funcion para manejar el placeholder como en contenedor-titulo
+// Función para manejar el placeholder como en contenedor-titulo
 function manejarPlaceholder(elemento, placeholderTexto) {
     elemento.addEventListener('focus', function() {
         if (elemento.value === '') {
@@ -109,5 +121,5 @@ function manejarPlaceholder(elemento, placeholderTexto) {
     });
 }
 
-// Agregar el evento al boton de agregar modulo
+// Agregar el evento al botón de agregar módulo
 agregarModuloBtn.addEventListener('click', agregarModulo);

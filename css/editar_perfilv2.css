@@ -1,8 +1,9 @@
-body {
+ body {
     margin: 0;
     font-family: Arial, sans-serif;
     overflow: hidden;
-}
+} 
+
 
 .top-bar {
     display: flex;
@@ -13,8 +14,9 @@ body {
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
     height: 60px;
     position: relative;
-    z-index: 0;
+    z-index: 0; /* Asegurarse de que la barra superior esté sobre el fondo */
 }
+
 
 .logo-container {
     display: flex;
@@ -118,7 +120,7 @@ body {
 .modal {
     display: none;
     position: fixed;
-    z-index: 1000;
+    z-index: 2000;
     left: 0;
     top: 0;
     width: 100%;
@@ -141,6 +143,7 @@ body {
     text-align: center; 
     position: relative; 
     margin: auto; 
+    z-index: 2001;
 }
 
 
@@ -387,134 +390,3 @@ body {
     white-space: nowrap; /* Evita que el texto se divida en varias líneas */
 }
 
-/*--------------------------------------------------------------*/
-/* Responsive */
-/* @media (min-width: 768px) {
-    .top-bar {
-        flex-direction: row;
-        justify-content: space-between;
-        height: 50px; 
-    }
-
-    .logo-container {
-        margin-left: -60px;
-        margin-bottom: 0;
-    }
-
-    .logo-container img {
-        height: 80px; 
-    }
-
-    .logo-container h1 {
-        font-size: 18px;
-        margin-left: -50px;
-    }
-
-    .icon-container img {
-        height: 20px;
-    }
-
-    .barra {
-        width: 600px; 
-    }
-
-    .circunferencia-container {
-        top: 80px; 
-        left: 160px;
-        transform: translate(-50%, 0);
-    }
-
-    .circunferencia {
-        width: 120px; 
-        height: 120px;
-    }
-
-    .modal-content {
-        width: 40%; 
-    }
-
-    .modal-info input {
-        width: 80%;
-    }
-
-    .menu-container {
-        top: 160px; 
-        left: 250px; 
-    }
-
-    .user-info {
-        top: 100px; 
-        left: 250px; 
-    }
-}
-
-@media (max-width: 767px) {
-    .top-bar {
-        height: auto;
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 10px;
-    }
-
-    .logo-container {
-        margin-left: 0;
-        margin-bottom: 10px;
-    }
-
-    .logo-container img {
-        height: 60px; 
-    }
-
-    .logo-container h1 {
-        font-size: 16px; 
-        margin-left: 0;
-    }
-
-    .icon-container img {
-        height: 18px; 
-    }
-
-    .barra {
-        width: 100%;
-        height: auto;
-        position: relative;
-    }
-
-    .barra-top-left,
-    .barra-bottom-right {
-        position: static;
-        transform: none;
-    }
-
-    .circunferencia-container {
-        position: relative;
-        top: 0;
-        left: 0;
-    }
-
-    .circunferencia {
-        width: 100px; 
-        height: 100px; 
-    }
-
-    .modal-content {
-        width: 80%;
-    }
-
-    .modal-info input {
-        width: 100%; 
-    }
-
-    .menu-container {
-        top: auto;
-        left: 0;
-        font-size: 14px; 
-    }
-
-    .user-info {
-        top: auto;
-        left: 0;
-        font-size: 14px; 
-    }
-}
- */
