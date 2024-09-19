@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cursos_de_interes_general</title>
+    <link rel="stylesheet" href="../css/cursos_de_interes_general.css">
+</head>
+<body>
+    <!--! Barra superior -->
+    <div class="top-bar">
+        <div class="logo-container">
+            <img src="/img/logo2.png" alt="Logo">
+            <h1>EntreLados</h1>
+        </div>  
+        <div class="icon-container">
+            <img src="/img/notificacion.png" alt="Notificación">
+            <img src="/img/perfil.png" alt="Perfil" id="profile-icon">
+            
+            <!--! Menú desplegable -->
+            <div class="dropdown-menu" id="profile-menu" style="display: none;">
+                <a href="editar_perfil.html">Mi perfil</a>
+                <a href="formulario_curso.html">Publicar un curso</a>
+                <button id="logout-btn">CERRAR SESIÓN</button>
+            </div>
+        </div>
+        
+    </div>
+
+<!--! Encabezado -->
+<header class="header">
+    <h1 class="title">CURSOS DE INTERÉS GENERAL</h1>
+    <div class="search-container">
+        <input type="text" class="search-bar" placeholder="Buscar">
+        <span class="search-icon">
+            <!-- insertar imagen de busqueda -->
+            <img src="" alt="Buscar">
+        </span>
+        <span class="clear-icon">×</span>
+    </div>
+</header>
+
+    <!-- Contenedor principal -->
+    <div class="main-container">
+<!-- Barra lateral izquierda -->
+<aside class="left-sidebar">
+    <h2>Filtrar</h2>
+    
+    <!--! Categorías -->
+    <div class="filter-section">
+        <h3>Categorías</h3>
+        <ul>
+            <li><input type="checkbox" id="belleza"><label for="belleza"> Belleza</label></li>
+            <li><input type="checkbox" id="automotriz"><label for="automotriz"> Automotriz</label></li>
+            <li><input type="checkbox" id="tecnologia"><label for="tecnologia"> Tecnología</label></li>
+            <li><input type="checkbox" id="habilidades-blandas"><label for="habilidades-blandas"> Habilidades blandas</label></li>
+            <li><input type="checkbox" id="insercion-laboral"><label for="insercion-laboral"> Inserción Laboral</label></li>
+            <li><input type="checkbox" id="organizacion"><label for="organizacion"> Organización</label></li>
+            <li><input type="checkbox" id="idiomas"><label for="idiomas"> Idiomas</label></li>
+            <li><input type="checkbox" id="diseno"><label for="diseno"> Diseño</label></li>
+            <li><input type="checkbox" id="marketing"><label for="marketing"> Marketing</label></li>
+            <li><input type="checkbox" id="otros"><label for="otros"> Otros</label></li>
+        </ul>
+    </div>
+
+    <!--! Dificultad -->
+    <div class="filter-section">
+        <h3>Dificultad</h3>
+        <ul>
+            <li><input type="checkbox" id="basica"><label for="basica"> Básica</label></li>
+            <li><input type="checkbox" id="intermedia"><label for="intermedia"> Intermedia</label></li>
+            <li><input type="checkbox" id="avanzada"><label for="avanzada"> Avanzada</label></li>
+        </ul>
+    </div>
+
+    <!--! el slider  -->
+    <div class="slider-container">
+        <h3>Duración</h3>
+        <input type="range" id="slider" min="0" max="5" step="0.1" value="0">
+        <p>Duración: <span id="slider-value">0/span> horas</p>
+                <!--? Boton para aplicar los filtros -->
+    <button id="apply-filters">Aplicar</button>
+    </div>
+    
+</aside>
+
+    <div>
+        <!-- Contenido principal -->
+        <main class="content">
+            <!-- Contenido principal -->
+        </main>
+    </div>
+    <script type="module" src="../js/cursos_de_interes_general.js"></script>
+
+    
+</body>
+</html>

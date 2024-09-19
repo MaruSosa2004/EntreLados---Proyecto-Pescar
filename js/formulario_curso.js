@@ -101,18 +101,28 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-
-/* boton siguiente le faltan los metodos */
-/* document.addEventListener('DOMContentLoaded', () => {
-    const btnSiguiente = document.getElementById('btn-siguiente');
-
-    btnSiguiente.addEventListener('click', () => {
-
-    });
-});
- */
-
 document.getElementById('btn-siguiente').addEventListener('click', function() {
     document.getElementById('formulario_curso').style.display = 'none';
     document.getElementById('formulario_curso2').style.display = 'block';
+});
+
+/* ----------circunfeencia-foto----------------*/
+document.querySelector('.circunferencia-foto').addEventListener('click', function() {
+    document.getElementById('file-input').click();
+});
+
+// Mostrar la imagen seleccionada
+document.getElementById('file-input').addEventListener('change', function(event) {
+    const file = event.target.files[0];
+    const reader = new FileReader();
+
+    reader.onload = function(e) {
+        const img = document.getElementById('foto-seleccionada');
+        img.src = e.target.result;
+        img.style.display = 'block'; 
+    };
+
+    if (file) {
+        reader.readAsDataURL(file);
+    }
 });

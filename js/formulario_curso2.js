@@ -1,17 +1,17 @@
 const agregarModuloBtn = document.getElementById('agregar-modulo');
 const modulosContainer = document.getElementById('modulos-container');
 
-// Contador para los módulos
+// Contador para los modulos
 let contadorModulos = 0;
 
 function agregarModulo() {
     contadorModulos++;
 
-    // Crear el contenedor del módulo visible
+    // Crear el contenedor del modulo 
     const nuevoModulo = document.createElement('div');
     nuevoModulo.classList.add('modulo');
     
-    // Crear el contenedor expandible 
+    // Crear contenedor expandible 
     const moduloContentExpandible = document.createElement('div');
     moduloContentExpandible.classList.add('modulo-content-expandible');
 
@@ -19,7 +19,7 @@ function agregarModulo() {
     const contenidosContainer = document.createElement('div');
     contenidosContainer.classList.add('contenidos-container');
 
-    // Contenido expandible con la descripción y primer contenido
+    // Contenido expandible con la descripcion y primer contenido
     const textareaId = `descripcion-modulo-${contadorModulos}`;
     moduloContentExpandible.innerHTML = `
         <h4 class="descripcion-titulo">Descripción *</h4>
@@ -31,7 +31,7 @@ function agregarModulo() {
     // Agregar el primer contenido
     agregarContenido(contenidosContainer, contadorModulos);
 
-    // Botón para agregar contenido
+    // Boton para agregar contenido
     const botonAgregarContenido = document.createElement('button');
     botonAgregarContenido.classList.add('boton-agregar-contenido');
     botonAgregarContenido.innerHTML = '+';
@@ -42,15 +42,15 @@ function agregarModulo() {
     moduloContentExpandible.appendChild(contenidosContainer);
     moduloContentExpandible.appendChild(botonAgregarContenido);
 
-    // Botón de guardar módulo
+    // Boton de guardar modulo
     const botonGuardarModulo = document.createElement('button');
     botonGuardarModulo.classList.add('boton-guardar');
     botonGuardarModulo.textContent = `Guardar Módulo ${contadorModulos}`;
     
-    // Añadir el botón de guardar al contenedor expandible
+    // Añadir el boton de guardar al contenedor expandible
     moduloContentExpandible.appendChild(botonGuardarModulo);
 
-    // Contenido visible del módulo
+    // Contenido del módulo
     nuevoModulo.innerHTML = `
         <h3>
             Módulo ${contadorModulos}:
@@ -59,11 +59,10 @@ function agregarModulo() {
         </h3>
     `;
 
-    // Añadir el módulo y su contenedor expandible al contenedor de módulos
+    // Añadir el modulo y su contenedor al contenedor de modulos
     modulosContainer.appendChild(nuevoModulo);
     modulosContainer.appendChild(moduloContentExpandible);
 
-    // Evento para expandir el módulo cuando se hace clic en la flecha
     const arrow = nuevoModulo.querySelector('.arrow-icon');
     arrow.addEventListener('click', function(event) {
         event.stopPropagation();
@@ -72,11 +71,9 @@ function agregarModulo() {
         arrow.classList.toggle('active');
     });
 
-    // Manejar el placeholder para la descripción
     const textarea = document.getElementById(textareaId);
     manejarPlaceholder(textarea, 'Ingrese una descripción breve de qué temas se abordarán en este módulo y todo lo que consideres relevante.');
 
-    // Manejar el placeholder para los campos de contenido
     const textareaContenido = nuevoModulo.querySelector('.textarea-contenido');
     if (textareaContenido) {
         manejarPlaceholder(textareaContenido, 'Ingrese el nombre que figurará para el apunte/video');
@@ -99,14 +96,12 @@ function agregarContenido(contenedor, moduloId) {
         </div>
     `;
 
-    // Aplicar el manejo de placeholder al nuevo campo de texto
     const textareaContenido = nuevoContenido.querySelector('.textarea-contenido');
     manejarPlaceholder(textareaContenido, 'Ingrese el nombre que figurará para el apunte/video');
 
     contenedor.appendChild(nuevoContenido);
 }
 
-// Función para manejar el placeholder como en contenedor-titulo
 function manejarPlaceholder(elemento, placeholderTexto) {
     elemento.addEventListener('focus', function() {
         if (elemento.value === '') {
@@ -121,5 +116,5 @@ function manejarPlaceholder(elemento, placeholderTexto) {
     });
 }
 
-// Agregar el evento al botón de agregar módulo
+// Agregar el evento al boton de agregar modulo
 agregarModuloBtn.addEventListener('click', agregarModulo);

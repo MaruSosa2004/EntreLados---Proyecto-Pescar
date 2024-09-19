@@ -14,13 +14,19 @@
         </div>  
         <div class="icon-container">
             <img src="/img/notificacion.png" alt="Notificación">
-            <img src="/img/perfil.png" alt="Perfil">
+            <img src="/img/perfil.png" alt="Perfil" id="profile-icon">
+            
+            <!-- Menú desplegable -->
+            <div class="dropdown-menu" id="profile-menu" style="display: none;">
+                <a href="editar_perfil.html">Mi perfil</a>
+                <a href="formulario_curso.html">Publicar un curso</a>
+                <button id="logout-btn">CERRAR SESIÓN</button>
+            </div>
         </div>
     </div>
 
     <!-- Contenedor con fondo debajo de la top-bar -->
     <div class="content-with-background">
-        <!-- Todo el contenido que deseas con el fondo aquí -->
         <!-- Circunferencia y boton -->
         <div class="circunferencia-container">
             <div class="circunferencia"></div>
